@@ -1,5 +1,5 @@
 //take it fom operation s and slice
-import {selectNameFilter} from './filtersSlice';
+import {selectNameFilter} from '../filters/selectors';
 import { createSelector } from '@reduxjs/toolkit'; // cama from slice
 
 export const selectContacts = state => state.contacts.items;

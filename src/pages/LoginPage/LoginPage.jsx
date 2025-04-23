@@ -2,8 +2,9 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 export default function LoginPage() {
     return (
       <div>
-        <PageTitle>Please log in</PageTitle>
+        <h2>Please log in</h2>
         <LoginForm />
       </div>
     );
   }
+
