@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/operations';
 // import { MdEmail } from 'react-icons/md';
-// import { RiLockPasswordFill } from 'react-icons/ri';
 import toast, { Toaster } from 'react-hot-toast';
 
 import css from './LoginForm.module.css';
@@ -43,7 +42,6 @@ export default function LoginForm() {
         <div >
           <label htmlFor='password'>Password</label>
           <div  className = {css.label}>
-            {/* <RiLockPasswordFill /> */}
             <Field  type='password' name='password' />
           </div>
           <ErrorMessage  name='password' component='span' />
