@@ -20,7 +20,7 @@ import { fetchContacts } from '../../redux/contacts/operations';
 
 return (
     <div>
-      <h1>Phonebook</h1>
+      <h2> Your phonebook</h2>
       <ContactForm />
       <SearchBox />
       {isLoading && <p>Loading</p>}

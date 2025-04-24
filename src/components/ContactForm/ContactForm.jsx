@@ -14,7 +14,6 @@ const ValidationSchema =Yup.object().shape({
     phoneNumber:Yup.string().min(7, "Enter valid phone number").max(50, "Too long").matches(phoneRegExp,"The phone number scheme is xxx-xx-xx").required("phone number is required"),
 })
 
-//export default function ContactForm ({onSubmit}){
     export default function ContactForm (){
     const dispatch = useDispatch();
 
@@ -29,12 +28,6 @@ const ValidationSchema =Yup.object().shape({
         actions.resetForm();
       };
     
-    // const handleSubmit = (values, actions) => {   it is supposed to work but not with me 
-    //     dispatch(addContact(values)); // Відправляємо у Redux
-    //     actions.resetForm();          // Очищаємо форму після сабміту
-    //   };
-    
-       // (THE KEY in initial values (username, number) has to be the same as the name of the FIELD)
     return(<Formik initialValues = {{
         username:"",
         phoneNumber:"",
@@ -50,13 +43,9 @@ const ValidationSchema =Yup.object().shape({
         <ErrorMessage className ={css.errorMessage} name ="phoneNumber" component ="span"/>
         <button className ={css.formButton}type="submit">Add Contact</button>
     
-
         </Form>
     </Formik>)
 
 
 }
 
-
-
-// =============mr=================================

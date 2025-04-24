@@ -14,7 +14,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-  const persistedReducer = persistReducer(  // like persisterAuthReducer Repeta
+  const persistedReducer = persistReducer( 
     {
       key: 'user-token',
       storage,
@@ -39,10 +39,5 @@ import storage from 'redux-persist/lib/storage';
 
   export const persistor = persistStore(store);
 
-// export const store = configureStore({
-//     reducer: {
-//       contacts: contactsReducer,
-//       filters: filtersReducer,
-//     },
-//   });
+
   //////////taken from hw7 to improve

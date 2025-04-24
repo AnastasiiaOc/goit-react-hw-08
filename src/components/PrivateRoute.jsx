@@ -9,4 +9,3 @@ export default function PrivateRoute({ component, redirectTo }) {
   return isLoggedIn ? component : <Navigate to={redirectTo} />;
 }
 
-// =======R=============
