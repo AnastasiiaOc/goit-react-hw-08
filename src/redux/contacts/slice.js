@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from './operations';
+import {logout} from './operations'
 // import {selectNameFilter} from './filtersSlice';  WENT TO SELECTORS
 
 // WENT TO SELECTOS
@@ -53,7 +54,10 @@ extraReducers: (builder) => {
       .addCase(deleteContact.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
-      });    
+      })
+      .addCase(logout.fulfilled, (state) => {
+        state.items = [];
+      });   
 },
 });
 
